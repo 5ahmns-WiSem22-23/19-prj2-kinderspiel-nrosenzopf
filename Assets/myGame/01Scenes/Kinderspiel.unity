@@ -636,6 +636,18 @@ MonoBehaviour:
   - {fileID: 1544645459}
   - {fileID: 1764044764}
   - {fileID: 1340995322}
+  rot: {fileID: 1764044764}
+  blau: {fileID: 210842637}
+  "gr\xFCn": {fileID: 1340995322}
+  gelb: {fileID: 278209981}
+  rosa: {fileID: 1669741062}
+  orange: {fileID: 1544645459}
+  fischrosa: {fileID: 1434443241}
+  fischgelb: {fileID: 1060284812}
+  fischblau: {fileID: 1189615837}
+  fischorange: {fileID: 83871347}
+  boot: {fileID: 2033156782}
+  x: 0
 --- !u!4 &1044189971
 Transform:
   m_ObjectHideFlags: 0
@@ -1710,7 +1722,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2033156782}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.715452, y: -1.808295, z: 0.10999999}
+  m_LocalPosition: {x: -7.23, y: -3.7, z: 0.10999999}
   m_LocalScale: {x: 0.51929, y: 0.51929, z: 0.51929}
   m_Children: []
   m_Father: {fileID: 2095606785}
@@ -1913,8 +1925,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141782856}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.21103165, y: -2.598295, z: 0.21}
-  m_LocalScale: {x: 0.55, y: 0.55, z: 0.55}
+  m_LocalPosition: {x: 0.21103165, y: -2.29, z: 0.21}
+  m_LocalScale: {x: 0.739255, y: 0.739255, z: 0.739255}
   m_Children: []
   m_Father: {fileID: 2095606785}
   m_RootOrder: 1
