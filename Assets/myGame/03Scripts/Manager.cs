@@ -14,6 +14,8 @@ public class Manager : MonoBehaviour
     public GameObject rosa;
     public GameObject orange;
 
+    public GameObject goal;
+
 
     public GameObject fischrosa;
     public GameObject fischgelb;
