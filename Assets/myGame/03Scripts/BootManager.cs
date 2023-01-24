@@ -10,33 +10,35 @@ public class BootManager : MonoBehaviour
     public GameObject fischblau;
     public GameObject fischgelb;
 
-    public float speed = 10f;
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject == fischorange)
         {
             fischorange.SetActive(false);
-          //  fischorange.transform.position += new Vector3(3f, 0, 0);
-            transform.Rotate(Vector3.up * speed * Time.deltaTime);
         }
 
         if (other.gameObject == fischrosa)
         {
-            fischrosa.SetActive(false);
-            fischrosa.transform.position += new Vector3(3f, 0, 0);
+           fischrosa.SetActive(false);
+
         }
 
         if (other.gameObject == fischblau)
         {
             fischblau.SetActive(false);
-            fischblau.transform.position += new Vector3(30f, 0, 0);
         }
 
         if (other.gameObject == fischgelb)
         {
             fischgelb.SetActive(false);
-            fischgelb.transform.position += new Vector3(3f, 0, 0);
         }
+
+
+    //   if(other.gameObject == fischorange && other.gameObject == fischrosa || other.gameObject == fischorange && other.gameObject == fischblau || other.gameObject == fischorange &&  other.gameObject == fischgelb || other.gameObject == fischrosa && other.gameObject == fischblau || other.gameObject == fischrosa && other.gameObject == fischgelb)
+     //   {
+    //        Debug.Log("Zwei");
+     //   } 
     }
 }
