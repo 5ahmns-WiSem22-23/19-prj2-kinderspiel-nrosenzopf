@@ -24,6 +24,13 @@ public class Manager : MonoBehaviour
     public GameObject boot;
     public bool x = false;
 
+
+
+    public GameObject ButtonRosa;
+    public GameObject ButtonOrange;
+    public GameObject ButtonBlau;
+    public GameObject ButtonGelb;
+
     public Goal goalScript;
     public BootManager bootScript;
 
@@ -90,6 +97,9 @@ public class Manager : MonoBehaviour
             void Update()
     {
 
+        // Button aktive
+
+
         if (blau.activeSelf && goalScript.goalBlau && x)
         {
             Debug.Log("Hier kommen die Buttons");
@@ -98,6 +108,7 @@ public class Manager : MonoBehaviour
             if (goalScript.goalOrange == false && bootScript.fischorangeboot.activeSelf == false)
             {
                 Debug.Log("Hier kommt ButtonOrange");
+                ButtonOrange.SetActive(true);
             }
 
             if (goalScript.goalGelb == false && bootScript.fischgelbboot.activeSelf == false)
@@ -183,15 +194,15 @@ public class Manager : MonoBehaviour
                 Debug.Log("Hier kommt ButtonGelb");
             }
 
-
-            if (goalScript.goalGelb == false && bootScript.fischgelbboot.activeSelf == false)
+            if (goalScript.goalOrange == false && bootScript.fischorangeboot.activeSelf == false)
             {
-                Debug.Log("Hier kommt ButtonGelb");
-            }
+                Debug.Log("Hier kommt ButtonOrange");
+            
+        }
 
         }
 
-
+        // Methoden Ausführen wenn gewürfelt
 
 
 
