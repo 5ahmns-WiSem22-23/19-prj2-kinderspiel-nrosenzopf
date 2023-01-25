@@ -25,6 +25,7 @@ public class Manager : MonoBehaviour
     public bool x = false;
 
     public Goal goalScript;
+    public BootManager bootScript;
 
     public void NextObject()
     {
@@ -88,9 +89,134 @@ public class Manager : MonoBehaviour
 
             void Update()
     {
-        if (blau.activeSelf == false)
+
+        if (blau.activeSelf && goalScript.goalBlau && x)
+        {
+            Debug.Log("Hier kommen die Buttons");
+            x = false;
+
+            if (goalScript.goalOrange == false && bootScript.fischorangeboot.activeSelf == false)
+            {
+                Debug.Log("Hier kommt ButtonOrange");
+            }
+
+            if (goalScript.goalGelb == false && bootScript.fischgelbboot.activeSelf == false)
+            {
+                Debug.Log("Hier kommt ButtonGelb");
+            }
+
+            if (goalScript.goalRosa == false && bootScript.fischrosaboot.activeSelf == false)
+            {
+                Debug.Log("Hier kommt ButtonRosa");
+            }
+
+
+        }
+
+
+
+
+        if (gelb.activeSelf && goalScript.goalGelb && x)
+        {
+            Debug.Log("Hier kommen die Buttons");
+            x = false;
+
+            if (goalScript.goalOrange == false && bootScript.fischorangeboot.activeSelf == false)
+            {
+                Debug.Log("Hier kommt ButtonOrange");
+
+            }
+
+            if (goalScript.goalRosa == false && bootScript.fischrosaboot.activeSelf == false)
+            {
+                Debug.Log("Hier kommt ButtonRosa");
+            }
+
+            if (goalScript.goalBlau == false && bootScript.fischblauboot.activeSelf == false)
+            {
+                Debug.Log("Hier kommt ButtonBlau");
+            }
+
+        }
+
+
+
+
+
+            if (rosa.activeSelf && goalScript.goalRosa && x)
+        {
+            Debug.Log("Hier kommen Buuuuuuuuuuuuttons");
+            x = false;
+
+            if (goalScript.goalOrange == false && bootScript.fischorangeboot.activeSelf == false) { 
+            Debug.Log("Hier kommt ButtonOrange");     
+            }
+
+            if (goalScript.goalBlau == false && bootScript.fischblauboot.activeSelf == false)
+            {
+                Debug.Log("Hier kommt ButtonBlau");
+            }
+
+            if (goalScript.goalGelb == false && bootScript.fischgelbboot.activeSelf == false)
+            {
+                Debug.Log("Hier kommt ButtonGelb");
+            }
+
+
+        }
+
+
+
+
+        if (orange.activeSelf && goalScript.goalOrange && x)
+        {
+            Debug.Log("Hier kommen die Buttons");
+            x = false;
+
+            if (goalScript.goalBlau == false && bootScript.fischblauboot.activeSelf == false)
+            {
+                Debug.Log("Hier kommt ButtonBlau");
+            }
+
+            if (goalScript.goalGelb == false && bootScript.fischgelbboot.activeSelf == false)
+            {
+                Debug.Log("Hier kommt ButtonGelb");
+            }
+
+
+            if (goalScript.goalGelb == false && bootScript.fischgelbboot.activeSelf == false)
+            {
+                Debug.Log("Hier kommt ButtonGelb");
+            }
+
+        }
+
+
+
+
+
+            if (fischblau.activeSelf == false && x)
+        {
+             BootGehtWeiter();
+            x = false;
+        }
+
+        if (fischrosa.activeSelf == false && x)
         {
             BootGehtWeiter();
+            x = false;
+        }
+
+        if (fischgelb.activeSelf == false && x)
+        {
+            BootGehtWeiter();
+            x = false;
+        }
+
+        if (fischorange.activeSelf == false && x)
+        {
+            BootGehtWeiter();
+            x = false;
         }
 
         if (blau.activeSelf && x && goalScript.dawosisBlau)

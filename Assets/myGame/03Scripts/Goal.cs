@@ -27,6 +27,12 @@ public class Goal : MonoBehaviour
     public bool dawosisRosa = true;
     public bool dawosisGelb = true;
 
+    public bool goalBlau = false;
+    public bool goalGelb = false;
+    public bool goalRosa = false;
+    public bool goalOrange = false;
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject == fischorange)
@@ -36,7 +42,7 @@ public class Goal : MonoBehaviour
             SonnenbrilleOrange.SetActive(true);
             // transform.Rotate(Vector3.up * speed * Time.deltaTime);
             dawosisOrange = false;
-
+            goalOrange = true;
         }
 
         if (other.gameObject == fischrosa)
@@ -46,7 +52,7 @@ public class Goal : MonoBehaviour
            // fischrosa.transform.position += new Vector3(3f, 0, 0);
             SonnenbrilleRosa.SetActive(true);
             dawosisRosa = false;
-
+            goalRosa = true;
         }
 
         if (other.gameObject == fischblau)
@@ -56,7 +62,8 @@ public class Goal : MonoBehaviour
          //   fischblau.transform.position += new Vector3(30f, 0, 0);
             SonnenbrilleBlau.SetActive(true);
             dawosisBlau = false;
-        }
+            goalBlau = true;
+}
 
         if (other.gameObject == fischgelb)
         {
@@ -65,6 +72,7 @@ public class Goal : MonoBehaviour
          //   fischgelb.transform.position += new Vector3(3f, 0, 0);
             SonnenbrilleGelb.SetActive(true);
             dawosisGelb = false;
+            goalGelb = true;
         }
     }
 
