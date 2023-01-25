@@ -9,6 +9,12 @@ public class BootManager : MonoBehaviour
     public GameObject fischrosa;
     public GameObject fischblau;
     public GameObject fischgelb;
+  
+
+    public GameObject fischorangeboot;
+    public GameObject fischrosaboot;
+    public GameObject fischblauboot;
+    public GameObject fischgelbboot;
 
     public int deactivatedGO = 0;
     public bool x = true;
@@ -19,35 +25,31 @@ public class BootManager : MonoBehaviour
         {
             deactivatedGO++;
             fischorange.SetActive(false);
+            fischorangeboot.SetActive(true);
         }
 
         if (other.gameObject == fischrosa)
         {
             deactivatedGO++;
             fischrosa.SetActive(false);
-
+            fischrosaboot.SetActive(true);
         }
 
         if (other.gameObject == fischblau)
         {
             deactivatedGO++;
             fischblau.SetActive(false);
+            fischblauboot.SetActive(true);
         }
 
         if (other.gameObject == fischgelb)
         {
             deactivatedGO++;
             fischgelb.SetActive(false);
+            fischgelbboot.SetActive(true);
         }
 
 
-
-
-
-    //   if(other.gameObject == fischorange && other.gameObject == fischrosa || other.gameObject == fischorange && other.gameObject == fischblau || other.gameObject == fischorange &&  other.gameObject == fischgelb || other.gameObject == fischrosa && other.gameObject == fischblau || other.gameObject == fischrosa && other.gameObject == fischgelb)
-     //   {
-    //        Debug.Log("Zwei");
-     //   } 
     }
 
 

@@ -15,8 +15,17 @@ public class Goal : MonoBehaviour
     public GameObject bubblesblau;
     public GameObject bubblesgelb;
 
+    public GameObject SonnenbrilleOrange;
+    public GameObject SonnenbrilleRosa;
+    public GameObject SonnenbrilleBlau;
+    public GameObject SonnenbrilleGelb;
+
     public float speed = 0.01f;
 
+    public bool dawosisOrange = true;
+    public bool dawosisBlau = true;
+    public bool dawosisRosa = true;
+    public bool dawosisGelb = true;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -24,8 +33,9 @@ public class Goal : MonoBehaviour
         {
             Debug.Log("Goal");
             bubblesorange.SetActive(true);
-           fischorange.transform.position += new Vector3(3f, 0, 0);
-           // transform.Rotate(Vector3.up * speed * Time.deltaTime);
+            SonnenbrilleOrange.SetActive(true);
+            // transform.Rotate(Vector3.up * speed * Time.deltaTime);
+            dawosisOrange = false;
 
         }
 
@@ -33,21 +43,28 @@ public class Goal : MonoBehaviour
         {
             Debug.Log("Goal");
             bubblesrosa.SetActive(true);
-            fischrosa.transform.position += new Vector3(3f, 0, 0);
+           // fischrosa.transform.position += new Vector3(3f, 0, 0);
+            SonnenbrilleRosa.SetActive(true);
+            dawosisRosa = false;
+
         }
 
         if (other.gameObject == fischblau)
         {
             Debug.Log("Goal");
             bubblesblau.SetActive(true);
-            fischblau.transform.position += new Vector3(30f, 0, 0);
+         //   fischblau.transform.position += new Vector3(30f, 0, 0);
+            SonnenbrilleBlau.SetActive(true);
+            dawosisBlau = false;
         }
 
         if (other.gameObject == fischgelb)
         {
             Debug.Log("Goal");
             bubblesgelb.SetActive(true);
-            fischgelb.transform.position += new Vector3(3f, 0, 0);
+         //   fischgelb.transform.position += new Vector3(3f, 0, 0);
+            SonnenbrilleGelb.SetActive(true);
+            dawosisGelb = false;
         }
     }
 

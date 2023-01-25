@@ -24,6 +24,8 @@ public class Manager : MonoBehaviour
     public GameObject boot;
     public bool x = false;
 
+    public Goal goalScript;
+
     public void NextObject()
     {
         currentObject = Random.Range(0, objects.Length);
@@ -86,16 +88,19 @@ public class Manager : MonoBehaviour
 
             void Update()
     {
+        if (blau.activeSelf == false)
+        {
+            BootGehtWeiter();
+        }
 
-
-        if (blau.activeSelf && x)
+        if (blau.activeSelf && x && goalScript.dawosisBlau)
         {
             BlauWeiter();
             x = false;
         
         }
 
-        if (rosa.activeSelf && x)
+        if (rosa.activeSelf && x && goalScript.dawosisRosa)
         {
             RosaWeiter();
             x = false;
@@ -103,7 +108,7 @@ public class Manager : MonoBehaviour
         }
 
 
-        if (gelb.activeSelf && x)
+        if (gelb.activeSelf && x && goalScript.dawosisGelb)
         {
             GelbWeiter();
             x = false;
@@ -111,7 +116,7 @@ public class Manager : MonoBehaviour
         }
 
 
-        if (orange.activeSelf && x)
+        if (orange.activeSelf && x && goalScript.dawosisOrange)
         {
             OrangeWeiter();
             x = false;
