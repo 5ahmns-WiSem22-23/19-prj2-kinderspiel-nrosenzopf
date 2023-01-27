@@ -16,6 +16,10 @@ public class BootManager : MonoBehaviour
     public GameObject fischblauboot;
     public GameObject fischgelbboot;
 
+    public GameObject panelFischerwin;
+    public GameObject panelFischelost;
+    public ButtonManager buttonManagerScript;
+
     public int deactivatedGO = 0;
     public bool x = true;
 
@@ -60,6 +64,15 @@ public class BootManager : MonoBehaviour
         {
             Debug.Log("Zwei oder mehr Gameobjekte wurden deaktiviert.");
             x = false;
+            if (buttonManagerScript.FischerTeam)
+            {
+                panelFischerwin.SetActive(true);
+            }
+
+            if (buttonManagerScript.FischeTeam)
+            {
+                panelFischelost.SetActive(true);
+            }
         }
     }
 }

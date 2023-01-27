@@ -32,6 +32,12 @@ public class Goal : MonoBehaviour
     public bool goalRosa = false;
     public bool goalOrange = false;
 
+    public int inGoal = 0;
+
+    public ButtonManager buttonManagerScript;
+    public GameObject panelFischWin;
+    public GameObject panelAnglerLost;
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -43,38 +49,58 @@ public class Goal : MonoBehaviour
             // transform.Rotate(Vector3.up * speed * Time.deltaTime);
             dawosisOrange = false;
             goalOrange = true;
+            inGoal++;
         }
 
         if (other.gameObject == fischrosa)
         {
             Debug.Log("Goal");
             bubblesrosa.SetActive(true);
-           // fischrosa.transform.position += new Vector3(3f, 0, 0);
+            // fischrosa.transform.position += new Vector3(3f, 0, 0);
             SonnenbrilleRosa.SetActive(true);
             dawosisRosa = false;
             goalRosa = true;
+            inGoal++;
         }
 
         if (other.gameObject == fischblau)
         {
             Debug.Log("Goal");
             bubblesblau.SetActive(true);
-         //   fischblau.transform.position += new Vector3(30f, 0, 0);
+            //   fischblau.transform.position += new Vector3(30f, 0, 0);
             SonnenbrilleBlau.SetActive(true);
             dawosisBlau = false;
             goalBlau = true;
-}
+            inGoal++;
+        }
 
         if (other.gameObject == fischgelb)
         {
             Debug.Log("Goal");
             bubblesgelb.SetActive(true);
-         //   fischgelb.transform.position += new Vector3(3f, 0, 0);
+            //   fischgelb.transform.position += new Vector3(3f, 0, 0);
             SonnenbrilleGelb.SetActive(true);
             dawosisGelb = false;
             goalGelb = true;
+            inGoal++;
         }
     }
+    void Update()
+    {
+
+        if (inGoal > 2)
+        {
+            Debug.Log("Zwei oder mehr Fische im Ziel");
+            if (buttonManagerScript.FischeTeam)
+            { panelFischWin.SetActive(true); }
+
+            if (buttonManagerScript.FischerTeam)
+            {
+                panelAnglerLost.SetActive(true);
+            }
+
+        }
 
 
     }
+}

@@ -24,6 +24,8 @@ public class Manager : MonoBehaviour
     public GameObject boot;
     public bool x = false;
 
+    public GameObject panel;
+
 
 
     public GameObject ButtonRosa;
@@ -54,32 +56,32 @@ public class Manager : MonoBehaviour
     public void BlauWeiter()
     {
         Debug.Log("WTF");
-        fischblau.transform.position += new Vector3(1.5f, 0,0);    
+        fischblau.transform.position += new Vector3(1.7f, 0,0);    
     }
 
     public void OrangeWeiter()
     {
         Debug.Log("WTF");
-        fischorange.transform.position += new Vector3(1.5f, 0, 0);
+        fischorange.transform.position += new Vector3(1.7f, 0, 0);
     }
 
     public void RosaWeiter()
     {
         Debug.Log("WTF");
-        fischrosa.transform.position += new Vector3(1.5f, 0, 0);
+        fischrosa.transform.position += new Vector3(1.7f, 0, 0);
     }
 
     public void GelbWeiter()
     {
         Debug.Log("WTF");
-        fischgelb.transform.position += new Vector3(1.5f, 0, 0);
+        fischgelb.transform.position += new Vector3(1.7f, 0, 0);
     }
 
     public void BootGehtWeiter()
     {
 
         Debug.Log("Kak Boot");
-        boot.transform.position += new Vector3(1.5f, 0, 0);
+        boot.transform.position += new Vector3(1.2f, 0, 0);
 
     }
 
@@ -102,6 +104,7 @@ public class Manager : MonoBehaviour
 
         if (blau.activeSelf && goalScript.goalBlau && x)
         {
+            panel.SetActive(true);
             Debug.Log("Hier kommen die Buttons");
             x = false;
 
@@ -114,11 +117,13 @@ public class Manager : MonoBehaviour
             if (goalScript.goalGelb == false && bootScript.fischgelbboot.activeSelf == false)
             {
                 Debug.Log("Hier kommt ButtonGelb");
+                ButtonGelb.SetActive(true);
             }
 
             if (goalScript.goalRosa == false && bootScript.fischrosaboot.activeSelf == false)
             {
                 Debug.Log("Hier kommt ButtonRosa");
+                ButtonRosa.SetActive(true);
             }
 
 
@@ -129,23 +134,26 @@ public class Manager : MonoBehaviour
 
         if (gelb.activeSelf && goalScript.goalGelb && x)
         {
+            panel.SetActive(true);
             Debug.Log("Hier kommen die Buttons");
             x = false;
 
             if (goalScript.goalOrange == false && bootScript.fischorangeboot.activeSelf == false)
             {
                 Debug.Log("Hier kommt ButtonOrange");
-
+                ButtonOrange.SetActive(true);
             }
 
             if (goalScript.goalRosa == false && bootScript.fischrosaboot.activeSelf == false)
             {
                 Debug.Log("Hier kommt ButtonRosa");
+                ButtonRosa.SetActive(true);
             }
 
             if (goalScript.goalBlau == false && bootScript.fischblauboot.activeSelf == false)
             {
                 Debug.Log("Hier kommt ButtonBlau");
+                ButtonBlau.SetActive(true);
             }
 
         }
@@ -156,21 +164,25 @@ public class Manager : MonoBehaviour
 
             if (rosa.activeSelf && goalScript.goalRosa && x)
         {
+            panel.SetActive(true);
             Debug.Log("Hier kommen Buuuuuuuuuuuuttons");
             x = false;
 
             if (goalScript.goalOrange == false && bootScript.fischorangeboot.activeSelf == false) { 
-            Debug.Log("Hier kommt ButtonOrange");     
+            Debug.Log("Hier kommt ButtonOrange");
+                ButtonOrange.SetActive(true);
             }
 
             if (goalScript.goalBlau == false && bootScript.fischblauboot.activeSelf == false)
             {
                 Debug.Log("Hier kommt ButtonBlau");
+                ButtonBlau.SetActive(true);
             }
 
             if (goalScript.goalGelb == false && bootScript.fischgelbboot.activeSelf == false)
             {
                 Debug.Log("Hier kommt ButtonGelb");
+                ButtonGelb.SetActive(true);
             }
 
 
@@ -181,24 +193,28 @@ public class Manager : MonoBehaviour
 
         if (orange.activeSelf && goalScript.goalOrange && x)
         {
+            panel.SetActive(true);
             Debug.Log("Hier kommen die Buttons");
             x = false;
 
             if (goalScript.goalBlau == false && bootScript.fischblauboot.activeSelf == false)
             {
                 Debug.Log("Hier kommt ButtonBlau");
+                ButtonBlau.SetActive(true);
             }
 
             if (goalScript.goalGelb == false && bootScript.fischgelbboot.activeSelf == false)
             {
                 Debug.Log("Hier kommt ButtonGelb");
+                ButtonGelb.SetActive(true);
             }
 
-            if (goalScript.goalOrange == false && bootScript.fischorangeboot.activeSelf == false)
+            if (goalScript.goalRosa == false && bootScript.fischrosaboot.activeSelf == false)
             {
                 Debug.Log("Hier kommt ButtonOrange");
-            
-        }
+                ButtonRosa.SetActive(true);
+
+            }
 
         }
 
