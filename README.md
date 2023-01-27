@@ -50,9 +50,11 @@ Cliparts in Illustrator umgewandelt in Vektorgrafiken und angepasst.
 Bubbles: https://assetstore.unity.com/packages/vfx/particles/environment/jiggly-bubble-free-61236
 
 #### 2-jährige Kinder können noch nicht lesen. Daher symbolisches Design.
-![Boot](https://user-images.githubusercontent.com/72389468/215184369-fd2dee54-bbd7-4a4e-ab86-ce556a1b490a.png)
-![Flaeche](https://user-images.githubusercontent.com/72389468/215052081-6bcb91f2-9e8d-43d5-9d1e-d267466ac132.png)
-![Fische](https://user-images.githubusercontent.com/72389468/215052037-b8ebabf2-e531-42e0-93b2-db06764779f8.png)
-![Anfanger](https://user-images.githubusercontent.com/72389468/215051969-e97cb1cb-d0db-4bb8-8754-05702076426e.png)
-![04Farbklecks](https://user-images.githubusercontent.com/72389468/215051962-8d892645-e8d4-46e9-8c4f-03c1a20581ce.png)
-![FischeWin](https://user-images.githubusercontent.com/72389468/215052060-4d868b40-cb35-497f-b538-7da3ed5e7bb4.png)
+![Zeichenfläche 1](https://user-images.githubusercontent.com/72389468/215192047-933e2049-b042-4236-a293-94059bb6ad8d.png)
+
+
+
+#### Entwicklungsplattformen
+- Windows 10
+- Unity 2020.3.18f1
+- Visual Studio 2019
