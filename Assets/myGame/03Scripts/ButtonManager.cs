@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ButtonManager : MonoBehaviour
 {
     public GameObject fischrosa;
@@ -23,6 +24,11 @@ public class ButtonManager : MonoBehaviour
 
     public bool FischerTeam = false;
     public bool FischeTeam = false;
+
+
+    public AudioSource audioSource;
+    public AudioClip sound;
+  
 
     public void AnglerTeam()
     {
@@ -82,4 +88,12 @@ public class ButtonManager : MonoBehaviour
     }
 
 
+ 
+    public void PlaySound()
+    {
+        AudioSource.PlayClipAtPoint(sound, transform.position);
+    }
 }
+
+
+

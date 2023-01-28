@@ -60,7 +60,7 @@ public class BootManager : MonoBehaviour
     void Update()
     {
         
-        if (deactivatedGO >= 2 && x)
+        if (deactivatedGO > 2 && x)
         {
             Debug.Log("Zwei oder mehr Gameobjekte wurden deaktiviert.");
             x = false;
