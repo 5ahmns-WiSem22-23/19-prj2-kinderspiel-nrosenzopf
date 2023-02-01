@@ -56,25 +56,25 @@ public class Manager : MonoBehaviour
     public void BlauWeiter()
     {
         Debug.Log("WTF");
-        fischblau.transform.position += new Vector3(1.7f, 0,0);    
+        fischblau.transform.position += new Vector3(2f, 0,0);    
     }
 
     public void OrangeWeiter()
     {
         Debug.Log("WTF");
-        fischorange.transform.position += new Vector3(1.7f, 0, 0);
+        fischorange.transform.position += new Vector3(2f, 0, 0);
     }
 
     public void RosaWeiter()
     {
         Debug.Log("WTF");
-        fischrosa.transform.position += new Vector3(1.7f, 0, 0);
+        fischrosa.transform.position += new Vector3(2f, 0, 0);
     }
 
     public void GelbWeiter()
     {
         Debug.Log("WTF");
-        fischgelb.transform.position += new Vector3(1.7f, 0, 0);
+        fischgelb.transform.position += new Vector3(2f, 0, 0);
     }
 
     public void BootGehtWeiter()
